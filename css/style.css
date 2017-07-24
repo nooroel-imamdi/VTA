@@ -1,0 +1,235 @@
+@font-face {
+    font-family: 'montserratbold';
+    src: url('../fonts/montserrat-bold-webfont.woff2') format('woff2'),
+         url('../fonts/montserrat-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'montserratlight';
+    src: url('../fonts/montserrat-light-webfont.woff2') format('woff2'),
+         url('../fonts/montserrat-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'montserratmedium';
+    src: url('../fonts/montserrat-medium-webfont.woff2') format('woff2'),
+         url('../fonts/montserrat-medium-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'montserratregular';
+    src: url('../fonts/montserrat-regular-webfont.woff2') format('woff2'),
+         url('../fonts/montserrat-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'montserratitalic';
+    src: url('../fonts/montserrat-italic-webfont.woff2') format('woff2'),
+         url('../fonts/montserrat-italic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'montserratsemibold';
+    src: url('../fonts/montserrat-semibold-webfont.woff2') format('woff2'),
+         url('../fonts/montserrat-semibold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+html, body{
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+body#splashpage {
+  background-image: url('../img/splash-screen-bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'montserratregular', Helvetica, Arial, sans-serif;
+}
+header.header {
+  width: 85%;
+  height: 2rem;
+  margin: 0 auto;
+  padding-top: 2rem;
+  box-sizing: border-box;
+}
+header.header .logo {
+  float: left;
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+}
+label.menuicon {
+  float: right;
+  position: relative;
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+  z-index: 2;
+  line-height: 0;
+}
+label.menuicon span {
+  display: inline-block;
+  width: 100%;
+  height: .4rem;
+  background-color: #e3e3e5;
+  -webkit-transition: all .4s ease-in-out;
+  -moz-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+label.menuicon span:nth-child(2) {
+  position: relative;
+  top: .3rem;
+}
+label.menuicon span:nth-child(3) {
+  position: relative;
+  top: .6rem;
+}
+
+input#menuicon {
+  display: none;
+}
+input#menuicon:checked + label.menuicon span {
+  background-color: #fff;
+}
+input#menuicon:checked + label.menuicon span:nth-child(1) {
+  -ms-transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  transform-origin: right bottom;
+}
+input#menuicon:checked + label.menuicon span:nth-child(2) {
+  display: none;
+}
+input#menuicon:checked + label.menuicon span:nth-child(3) {
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  transform-origin: right top;
+  top: 1.15rem;
+}
+nav.menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #414142;
+  width: 100%;
+  height: 100%;
+  height: 100vh;
+  overflow: scroll;
+  display: none;
+  z-index: 1;
+}
+nav.menu ul {
+  list-style-type: none;
+  margin: 4rem 0 0;
+  padding: 0;
+  text-align: center;
+  line-height: 3;
+}
+nav.menu ul a,
+nav.menu ul a:visited {
+  color: #e3e3e5;
+  text-decoration: none;
+  font-family: 'montserratsemibold', Helvetica, Arial, sans-serif;
+  font-size: 1.5em;
+  display: inline-block;
+}
+nav.menu ul a:hover {
+  text-decoration: underline;
+}
+nav.menu ul a.contact {
+  font-family: 'montserratregular', Helvetica, Arial, sans-serif;
+  font-size: 1.4em;
+  border-top: 1px solid #959595;
+  margin-top: 1rem;
+  padding-top: 1rem;
+}
+input#menuicon:checked ~ nav.menu {
+  display: block;
+}
+
+button {
+  background-color: #6c9db7;
+  color: #e3e3e5;
+  font-family: 'montserratsemibold', Helvetica, Arial, sans-serif;
+  font-size: 1.3em;
+  border: 0;
+  border-radius: 3px;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  padding: .6rem 2rem;
+  cursor: pointer;
+  -webkit-transition: all .4s ease-in-out;
+  -moz-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+button:hover {
+  background-color: #81bedf;
+}
+
+section.welcome {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+section.welcome .wrapper {
+  width: 80%;
+  margin: 0 auto 7rem;
+  text-align: center;
+}
+section.welcome h1 {
+  font-size: 2.3em;
+  color: #e3e3e5;
+  margin-bottom: 0;
+}
+section.welcome p {
+  font-family: 'montserratitalic', Helvetica, Arial, sans-serif;
+  color: #939393;
+  font-size: 1.2em;
+  margin-top: 0;
+  margin-bottom: 2.5rem;
+  padding-top: 0;
+}
+
+
+
+/*
+* Clearfix: contain floats
+*
+* For modern browsers
+* 1. The space content is one way to avoid an Opera bug when the
+* contenteditable attribute is included anywhere else in the document.
+* Otherwise it causes space to appear at the top and bottom of elements
+* that receive the clearfix class.
+* 2. The use of table rather than block is only necessary if using
+* :before to contain the top-margins of child elements.
+*/
+
+.clearfix:before,
+.clearfix:after {
+content: " ";
+display: table;
+}
+
+.clearfix:after {
+clear: both;
+}
+
+/*
+* For IE 6/7 only
+* Include this rule to trigger hasLayout and contain floats.
+*/
+
+.clearfix {
+*zoom: 1;
+}
