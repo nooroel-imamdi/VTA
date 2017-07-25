@@ -200,6 +200,13 @@ ul.social-media-icons li a {
   background-position: center;
   width: 2rem;
   height: 2rem;
+  -webkit-transition: all .4s ease-in-out;
+  -moz-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+ul.social-media-icons li a:hover {
+  opacity: .6;
 }
 ul.social-media-icons li a.twitter-icon {
   background-image: url('../img/twitter-icon.svg');
@@ -261,8 +268,6 @@ button:hover {
   background-color: #81bedf;
 }
 
-
-
 section.welcome {
   position: fixed;
   bottom: 0;
@@ -285,6 +290,28 @@ section.welcome p {
   margin-top: 0;
   margin-bottom: 2.5rem;
   padding-top: 0;
+}
+@media only screen and (min-width: 64.063em) {
+  section.welcome {
+    background: rgba(0, 0, 0, 0.5);
+    width: 50%;
+    height: 100%;
+    right: 0;
+    bottom: 0;
+    overflow: scroll;
+  }
+  section.welcome .wrapper {
+    width: 80%;
+    margin: 13rem auto 0;
+    padding-top: 1em;
+    text-align: center;
+  }
+  section.welcome h1 {
+    margin-top: 2rem;
+  }
+}
+section.welcome ul.social-media-icons {
+  margin-top: 10rem;
 }
 
 .hide {
