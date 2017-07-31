@@ -44,6 +44,7 @@ html, body{
   margin: 0;
   padding: 0;
   height: 100%;
+  background-color: #000000;
 }
 body#splashpage {
   background-image: url('../img/splash-screen-bg.jpg');
@@ -55,7 +56,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 header.header {
   width: 85%;
-  height: 2rem;
+  height: 4rem;
   margin: 0 auto;
   padding-top: 2rem;
   box-sizing: border-box;
@@ -63,8 +64,12 @@ header.header {
 header.header .logo {
   float: left;
   display: inline-block;
-  width: 2rem;
-  height: 2rem;
+  width: 4rem;
+  height: 4rem;
+}
+header.header .logo img {
+  width: 100%;
+  height: auto;
 }
 label.menuicon {
   float: right;
@@ -204,9 +209,10 @@ ul.social-media-icons li a {
   -moz-transition: all .4s ease-in-out;
   -o-transition: all .4s ease-in-out;
   transition: all .4s ease-in-out;
+  opacity: .7;
 }
 ul.social-media-icons li a:hover {
-  opacity: .6;
+  opacity: 1;
 }
 ul.social-media-icons li a.twitter-icon {
   background-image: url('../img/twitter-icon.svg');
